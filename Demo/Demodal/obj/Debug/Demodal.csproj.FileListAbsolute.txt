@@ -1,0 +1,14 @@
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demodal\bin\Debug\Demodal.dll.config
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demodal\bin\Debug\Demodal.dll
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demodal\bin\Debug\Demodal.pdb
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demodal\bin\Debug\EntityFramework.dll
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demodal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demodal\bin\Debug\EntityFramework.xml
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demodal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demodal\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demodal\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demodal\obj\Debug\Demodal.csprojAssemblyReference.cache
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demodal\obj\Debug\Demodal.csproj.CoreCompileInputs.cache
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demodal\obj\Debug\Demodal.csproj.CopyComplete
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demodal\obj\Debug\Demodal.dll
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demodal\obj\Debug\Demodal.pdb

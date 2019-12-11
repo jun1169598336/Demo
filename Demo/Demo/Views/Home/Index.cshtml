@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Demodal.model.trashtype>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/layui/layui.js"></script>
+    <link href="~/layui/css/layui.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        <button type="button" class="layui-btn layui-btn-lg layui-btn-primary layui-btn-radius"> @Html.ActionLink("添加类型", "Create")</button>
+       
+    </p>
+    <table class="table layui-table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.typeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.typeHarm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.typeWay)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.typeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.typeHarm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.typeWay)
+            </td>
+            <td>
+                @Html.ActionLink("修改", "Edit", new { id=item.typeId }) |
+                @*@Html.ActionLink("Details", "Details", new { id=item.typeId }) |*@
+                @Html.ActionLink("删除", "Delete", new { id=item.typeId })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
