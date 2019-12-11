@@ -15,5 +15,13 @@ namespace Demodal
             List<trashtype> list = mo.trashtype.ToList();
             return list;
         }
+
+        public static usertable longin(string name,string pwd)
+        {
+            Model1 mo = new Model1();
+            List<usertable> lis = mo.usertable.ToList();
+            usertable li = lis.FirstOrDefault(p => p.userName==name && p.userWord==pwd);
+            return li;
+        }
     }
 }

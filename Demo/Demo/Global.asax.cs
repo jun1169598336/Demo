@@ -12,7 +12,9 @@ namespace Demo
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+            //FilterConfig.registerGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            
         }
     }
 }

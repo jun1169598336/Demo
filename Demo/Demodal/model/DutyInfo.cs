@@ -12,7 +12,7 @@ namespace Demodal.model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DutyInfo()
         {
-            usertable = new HashSet<usertable>();
+            //usertable = new HashSet<usertable>();
         }
 
         [Key]
@@ -21,7 +21,7 @@ namespace Demodal.model
         [StringLength(20)]
         public string DutyName { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<usertable> usertable { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<usertable> usertable { get; set; }
     }
 }

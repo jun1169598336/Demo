@@ -23,10 +23,8 @@ namespace Demodal.model
                 .Property(e => e.DutyName)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<DutyInfo>()
-                .HasMany(e => e.usertable)
-                .WithOptional(e => e.DutyInfo)
-                .HasForeignKey(e => e.userDuty);
+            //modelBuilder.Entity<usertable>()
+            //    .HasForeignKey(e => e.userDuty);
 
             modelBuilder.Entity<information>()
                 .Property(e => e.infoName)

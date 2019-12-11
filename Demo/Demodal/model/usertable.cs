@@ -20,6 +20,6 @@ namespace Demodal.model
 
         public int? userDuty { get; set; }
 
-        public virtual DutyInfo DutyInfo { get; set; }
+        //public virtual DutyInfo DutyInfo { get; set; }
     }
 }

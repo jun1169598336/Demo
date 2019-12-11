@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <input id="Text1" type="text" /> <input id="Text2" type="text" /><input id="Button1" type="button" value="button" />
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#Button1").click(function () {
+                var name = $("#Text1").val();
+                var pwd = $("#Text2").val();
+                $.ajax({
+                    url: "/Login/loginIn",
+                    type: "post",
+                    data: { "name": name, "pwd": pwd },
+                    dateType: "json",
+                    success: function (jsonResult) {
+                        if (jsonResult.state == "200") {
+                            window.location.href = "/Home/Index";
+                        } else {
+                            alert(1);
+                        }
+                    }
+                })
+            })
+
+        })
+    </script>
+</body>
+</html>

@@ -80,3 +80,5 @@ C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demo\obj\Debug\Demo.csproj.CoreCompil
 C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demo\obj\Debug\Demo.csproj.CopyComplete
 C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demo\obj\Debug\Demo.dll
 C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demo\obj\Debug\Demo.pdb
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demo\bin\Newtonsoft.Json.dll
+C:\Users\my丶loves\Desktop\Demo\Demo\Demo\Demo\bin\Newtonsoft.Json.xml
