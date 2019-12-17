@@ -1,6 +1,10 @@
 use master
 go
 
+if exists(select * from sys.databases where name ='trash')
+drop database trash
+go
+
 create database trash
 go
 
@@ -22,13 +26,13 @@ create table usertable
 	userId int primary key identity(1,1),
 	userName varchar(20),
 	userWord varchar(20),
-	userDuty int references DutyInfo(DutyId)
+	DutyId int references DutyInfo(DutyId)
 )
 
 insert into usertable values('张三','123456',1)
 insert into usertable values('李四','123456',2)
-
 select * from usertable
+
 
 --垃圾类型表
 create table trashtype								
@@ -50,7 +54,7 @@ create table information
 	infoId int primary key identity(1,1),			--编号
 	infoName varchar(20),							--垃圾名称
 	infoImg varchar(20),							--垃圾图片
-	infoType int references trashtype(typeid),		--垃圾类型
+	typeid int references trashtype(typeid),		--垃圾类型
 )
 
 insert into information values('剩菜','',1)
@@ -58,4 +62,4 @@ insert into information values('塑料袋','',2)
 insert into information values('废纸','',3)
 insert into information values('电池','',4)
 
-select information.*,trashtype.* from information,trashtype where trashtype.typeId=information.infoType
+select information.*,trashtype.* from information,trashtype where trashtype.typeId=information.typeId

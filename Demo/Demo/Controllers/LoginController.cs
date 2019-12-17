@@ -27,8 +27,8 @@ namespace Demo.Controllers
             if (user != null)
             {
                 string json = JsonConvert.SerializeObject(user);
-                HttpCookie cookie = new HttpCookie("login", Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(json)));
-                Response.Cookies.Add(cookie);
+                //HttpCookie cookie = new HttpCookie("login", Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(json)));
+                //Response.Cookies.Add(cookie);
                 jsonResult.Data = new { data = json, state = "200" };
                 jsonResult.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
                 return jsonResult;

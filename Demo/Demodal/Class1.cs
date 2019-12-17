@@ -23,5 +23,13 @@ namespace Demodal
             usertable li = lis.FirstOrDefault(p => p.userName==name && p.userWord==pwd);
             return li;
         }
+
+        public static int insert(trashtype type)
+        {
+            Model1 mo = new Model1();
+            mo.trashtype.Add(type);
+            return mo.SaveChanges();
+        }
+
     }
 }

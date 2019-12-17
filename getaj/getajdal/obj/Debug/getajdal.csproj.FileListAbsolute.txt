@@ -1,0 +1,13 @@
+C:\Users\my丶loves\Desktop\Demo\Demo\getaj\getajdal\bin\Debug\getajdal.dll.config
+C:\Users\my丶loves\Desktop\Demo\Demo\getaj\getajdal\bin\Debug\getajdal.dll
+C:\Users\my丶loves\Desktop\Demo\Demo\getaj\getajdal\bin\Debug\getajdal.pdb
+C:\Users\my丶loves\Desktop\Demo\Demo\getaj\getajdal\bin\Debug\EntityFramework.dll
+C:\Users\my丶loves\Desktop\Demo\Demo\getaj\getajdal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\my丶loves\Desktop\Demo\Demo\getaj\getajdal\bin\Debug\EntityFramework.xml
+C:\Users\my丶loves\Desktop\Demo\Demo\getaj\getajdal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\my丶loves\Desktop\Demo\Demo\getaj\getajdal\obj\Debug\getajdal.csprojAssemblyReference.cache
+C:\Users\my丶loves\Desktop\Demo\Demo\getaj\getajdal\obj\Debug\getajdal.csproj.CoreCompileInputs.cache
+C:\Users\my丶loves\Desktop\Demo\Demo\getaj\getajdal\obj\Debug\getajdal.csproj.CopyComplete
+C:\Users\my丶loves\Desktop\Demo\Demo\getaj\getajdal\obj\Debug\getajdal.dll
+C:\Users\my丶loves\Desktop\Demo\Demo\getaj\getajdal\obj\Debug\getajdal.pdb
+C:\Users\my丶loves\Desktop\Demo\Demo\getaj\getajdal\bin\Debug\HPIT.Data.Core.dll

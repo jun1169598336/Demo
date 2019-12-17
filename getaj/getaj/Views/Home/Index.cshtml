@@ -1,0 +1,128 @@
+﻿@model IEnumerable<getajdal.model.trashtype>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/js/paging.css" rel="stylesheet" />
+    <script src="~/jquery-2.1.1.min.js"></script>
+    <script src="~/layui/layui.js"></script>
+    <link href="~/layui/css/layui.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="qwe"></div>
+    <div style="width: 216px; margin: 0;">
+        <button type="button" class="layui-btn layui-btn-fluid">@Html.ActionLink("添加", "Create")</button>
+    </div>
+
+    <table class="table layui-table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.typeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.typeHarm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.typeWay)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.typeName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.typeHarm)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.typeWay)
+                </td>
+                <td>
+                    @Html.ActionLink("修改", "update", new { id = item.typeId }) |
+                    @*@Html.ActionLink("Details", "Details", new { id = item.typeId }) |*@
+                    @Html.ActionLink("删除", "delete", new { id = item.typeId })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <script src="~/jquery-2.1.1.min.js"></script>
+
+</body>
+</html>
+@section scripts{
+    <script src="~/scripts/jquery.tmpl.js"></script>
+    <script src="~/scripts/paging.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        var _ = {
+            MasterData: {},
+            options: {
+                "url": "/Home/QueryPageData",
+                "data": { "PageIndex": 0, "PageSize": 12 },
+                "type": "post",
+                "datatype": "json"
+            },
+            render: function (data) {
+                $("#ListTb tr:gt(0)").remove();
+                $("#dataList").tmpl(data).appendTo('#ListTb');
+            },
+            getQueryString: function (name) {
+                var reg = new RegExp('(?:(?:&|\\?)' + name + '=([^&]*))|(?:/' + name + '/([^/]*))', 'i');
+                var r = window.location.href.match(reg);
+                if (r != null)
+                    return decodeURI(r[1] || r[2]);
+                return null;
+            },
+            ajaxData: function (options, callback) {
+                $.ajax({
+                    url: options.url,
+                    data: options.data,
+                    type: options.type,
+                    dataType: options.dataType,
+                    beforeSend: function () {
+                        $("#loading").show();
+                    },
+                    success: function (survey) {
+                        callback(survey);
+                    },
+                    complete: function () {
+                        $("#loading").hide();
+                    }
+                })
+            }
+        };
+        $(document).ready(function () {
+            _.ajaxData(_.options, function (result) {
+                _.render(result);
+                var setTotalCount = result.Total;
+                $('#box').paging({
+                    initPageNo: 1, // 初始页码
+                    totalPages: result.TotalPages, //总页数
+                    totalCount: '合计' + setTotalCount + '条数据', // 条目总数
+                    slideSpeed: 600, // 缓动速度。单位毫秒
+                    jump: true, //是否支持跳转
+                    callback: function (page) {
+                        //回调函数
+                        //alert(page);
+                        _.options.data.PageIndex = page;
+                        _.ajaxData(_.options, function (result) {
+                            _.render(result);
+                        });
+                    }
+                })
+            });
+        })
+    </script>
+}
+

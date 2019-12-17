@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>insert</title>
+    <script src="~/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+    <div> 
+        <input id="Text1" type="text" />
+        <input id="Text2" type="text" />
+        <input id="Text3" type="text" />
+        <input id="Button1" type="button" value="添加" />
+    </div>
+    <script>
+        $(function () {
+            $("#Button1").click(function () {
+                
+                var name = $("Text1").val();
+                var wei = $("Text2").val();
+                var chu = $("Text3").val();
+                $.ajax({
+                    url: "/Home/insertmod",
+                    type: "get",
+                    data: { "name": name, "wei": wei, "chu": chu },
+                    dateType: "int",
+                    success: function (str) {
+                        if (str != 0) {
+                            alert("添加成功");
+                            window.location.href = "/Home/Index";
+                        }
+                        else {
+                            alert("添加失败");
+                        }
+                          
+                    }
+                })
+
+            })
+        })
+    </script>
+</body>
+</html>
